@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Hype Index</title>
+<meta name="description" content="Did GTA VI hype move Take-Two's stock? An event study and correlation analysis of trailers, delays and launch, using Wikipedia attention, Google Trends and market data.">
+<meta property="og:title" content="Leonida Hype Index">
+<meta property="og:description" content="Trailers move eyeballs. Delays move the stock. A data look at GTA VI hype vs Take-Two.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l4.2 9.2 10 1-7.5 6.8 2.2 9.8L16 23.8 7.1 28.8l2.2-9.8L1.8 12.2l10-1z' fill='%23ff5aa8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="palms" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="kicker">Fan-made data project · Vice City, Leonida</div>
+    <h1>Leonida<br><span>Hype Index</span></h1>
+    <p class="lede">GTA VI took 13 years and broke every trailer record. It came out on 19 November 2026.
+      Did all that hype actually move Take-Two's share price? Here's what three years of public data show.</p>
+    <div class="mission" id="mission">
+      <div class="mission-title">Mission passed</div>
+      <div class="mission-sub" id="mission-sub">GTA VI is out</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="tiles" id="tiles" aria-label="Headline numbers"></section>
+
+  <section class="block">
+    <div class="eyebrow">The answer</div>
+    <h2>Trailers move eyeballs. Delays move the stock.</h2>
+    <div class="findings" id="findings"></div>
+  </section>
+
+  <section class="block">
+    <div class="eyebrow">Mission log</div>
+    <h2>Three years of hype, one day at a time</h2>
+    <p class="note">Top: daily views of the English Wikipedia article on GTA VI (log scale), a clean measure of public attention.
+      Bottom: Take-Two (TTWO) closing price. Separate charts, same dates. Pins mark GTA moments; gold pins are delays.</p>
+    <div class="ranges" role="group" aria-label="Date range" id="ranges">
+      <button data-r="all" class="on">All</button>
+      <button data-r="2025">2025</button>
+      <button data-r="2026">2026</button>
+      <button data-r="launch">Launch month</button>
+    </div>
+    <div class="card"><div class="chart-title">Attention · Wikipedia views per day</div><div id="c-attn" class="chart tall"></div></div>
+    <div class="card"><div class="chart-title">Take-Two (TTWO) · close, USD</div><div id="c-price" class="chart"></div></div>
+  </section>
+
+  <section class="block">
+    <div class="eyebrow">Event study</div>
+    <h2>What each moment did to the stock</h2>
+    <p class="note">Abnormal return = TTWO's move minus what the market (S&amp;P 500, SPY) predicts for it that day, fitted on the 120 trading days before each event.
+      It isolates the GTA news from the rest of the market.</p>
+    <div class="legend" id="type-legend"></div>
+    <div class="card"><div class="chart-title">Abnormal return on the reaction day</div><div id="c-events" class="chart tall"></div></div>
+    <div class="table-wrap">
+      <table class="events" id="events-table">
+        <thead><tr><th>Reaction day</th><th>Moment</th><th class="n">TTWO</th><th class="n">vs market</th><th class="n">Volume</th><th class="n">Attention</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="eyebrow">Correlation lab</div>
+    <h2>How to correlate hype with a stock without fooling yourself</h2>
+    <p class="note">Attention and price both drift over three years, so comparing them raw can make a link appear or vanish by accident.
+      The fix: compare <em>surprises</em> (today vs the usual level), not levels.</p>
+    <div class="trap" id="trap"></div>
+    <div class="two">
+      <div class="card">
+        <div class="chart-title">Attention surprise vs trading volume surprise (each trading day)</div>
+        <div id="c-scatter" class="chart tall"></div>
+        <p class="note small">Each dot is one trading day: how far attention and TTWO volume were above or below their usual level.
+          The cloud tilts up and to the right; GTA moments sit at the far edge.</p>
+      </div>
+      <div class="card">
+        <div class="chart-title">Who moves first? Correlation by lag (days)</div>
+        <div id="c-lag" class="chart tall"></div>
+        <p class="note small" id="lag-note"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="eyebrow">Dhaka check</div>
+    <h2>Bangladesh vs the world</h2>
+    <p class="note">Google search interest in "GTA 6" by week. Each line is scaled to its own peak (100), so this compares the <em>shape</em> of the hype, not its size.</p>
+    <div class="two">
+      <div class="card"><div class="chart-title">Weekly search interest, indexed to each peak = 100</div><div id="c-bd" class="chart tall"></div></div>
+      <div class="card"><div class="chart-title">Search interest by country, last 12 months (UK = 100)</div><div id="c-sa" class="chart tall"></div></div>
+    </div>
+    <div class="findings" id="bd-findings"></div>
+  </section>
+
+  <section class="block method">
+    <div class="eyebrow">Method &amp; sources</div>
+    <h2>How it was built</h2>
+    <div class="cols">
+      <div>
+        <h3>Data (all public, free)</h3>
+        <ul>
+          <li><b>Attention:</b> Wikimedia pageviews API, English article "Grand Theft Auto VI", users only, daily. The article went live on 4–5 Dec 2023.</li>
+          <li><b>Market:</b> Yahoo Finance daily TTWO and SPY, adjusted close and volume.</li>
+          <li><b>Search:</b> Google Trends "GTA 6", weekly, worldwide and Bangladesh; country ranking for the last 12 months.</li>
+          <li><b>Launch facts:</b> third-party reports, linked on each event. Sales figures are Sensor Tower estimates, not Take-Two numbers.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Method</h3>
+        <ul>
+          <li><b>Event study:</b> market model (TTWO on SPY) fitted on trading days −130 to −10; abnormal return on the reaction day (news after the close counts the next day).</li>
+          <li><b>Volume and attention ratios:</b> reaction day vs the median of the previous 60 trading days / 30 calendar days.</li>
+          <li><b>Correlation:</b> Pearson and Spearman on daily surprises (log value minus its trailing baseline); weekend views roll into Monday.</li>
+          <li><b>Wanted level:</b> 20-day volatility of TTWO, ranked against its own 2023–26 history (5 stars = top 5%).</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Caveats</h3>
+        <ul>
+          <li>Only about 10 events. Treat averages as stories, not laws.</li>
+          <li>Correlation is not causation: earnings news and hype often land on the same day.</li>
+          <li>Wikipedia attention skews to English-reading audiences.</li>
+          <li>Not affiliated with Rockstar Games or Take-Two Interactive. Not investment advice.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot" id="foot"></p>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
