@@ -1,28 +1,38 @@
 # Leonida Hype Index
 
-**The question.** Grand Theft Auto VI took 13 years, set YouTube records with every trailer and finally launched on
-19 November 2026. Did all that hype actually move Take-Two Interactive's share price, or did fans and investors
-care about different things?
+**The question.** GTA VI is the most hyped video game ever made. It finally came out on 19 November 2026.
+The company that owns its maker, Rockstar Games, is Take-Two Interactive, and anyone can buy its shares on the US
+stock market (code TTWO). So: when fans got excited, did investors get excited too?
 
-**The answer.** Trailers move eyeballs, not the stock. Delays move the stock. Day to day, hype goes with *how much*
-Take-Two trades, not *which way* the price goes. See the [live dashboard](https://zubayerojhor.github.io/leonida-hype-index/).
+**The short answer.** Not really. Fans went wild for trailers. Investors only reacted to news about *money*:
+delays, sales and reviews. See the [live dashboard](https://zubayerojhor.github.io/leonida-hype-index/).
 
 All data is real and public. Nothing is simulated.
 
-## What the data says
+## What the data says, in plain words
 
-| | |
+"Vs the market" means Take-Two's move with the whole stock market's move (the S&P 500) taken out, so only the
+GTA part is left.
+
+| Moment | What happened |
 |---|---|
-| Trailer days (4 reveals) | Attention 8–11× normal, yet TTWO beat the market by only **+1.2%** on average |
-| Delay days (2 delays) | TTWO fell about **8% vs the market** each time, on 4–5× normal volume |
-| Review day (18 Nov 2026, Metacritic 99) | Attention 20× normal, TTWO **+6.5%** vs the market |
-| Launch day (19 Nov 2026) | All-time attention peak (750k Wikipedia views, 29× normal), yet TTWO **−2.6%** vs the market: sell the news |
-| Control event (Google Project Genie, 30 Jan 2026) | TTWO **−7.8%** with *no* rise in GTA attention: the stock moves for reasons hype can't see |
-| Attention vs price, raw levels | r = 0.04 (Spearman 0.30). Two drifting series, unreliable |
-| Daily attention change vs daily return | r = −0.02. No directional link |
-| Attention surprise vs volume surprise | **r = 0.34** (0.19 with all event days removed). The real link |
-| Who moves first? | Same day. A slight tilt to attention leading by one day, too small to trade on |
-| Bangladesh | #59 of 67 countries for search interest, but trailers hit **2.5–3.7× harder** here relative to launch week than worldwide |
+| Trailer days (4 big reveals) | 8–11× more people than usual read about GTA VI, yet the shares did only **1.2% better** than the market on average |
+| Delay days (2 delays) | Shares fell about **8% vs the market** each time. The second delay wiped roughly $3 billion off Take-Two's value |
+| Review day (18 Nov 2026, 99/100) | Shares **+6.5%** vs the market |
+| Launch day (19 Nov 2026) | The most interest ever (750k Wikipedia readers in a day), yet shares **−2.6%** vs the market: investors took profits |
+| A dull results day (7 Feb 2025) | Take-Two just said "still on schedule": **+14.8%**, the biggest jump of all |
+| Not-GTA comparison (Google AI tool, 30 Jan 2026) | Shares **−7.8%** with no change in GTA interest: shares also move for reasons hype can't see |
+| The big picture | From Trailer 1 to launch, Take-Two's shares rose **33%**; the whole market rose **63%** |
+
+Across all ~740 trading days:
+
+| Question | Answer |
+|---|---|
+| More interest → shares go up? | **No link** (r = −0.02) |
+| More interest → more shares traded? | **Moderate link** (r = 0.34; still 0.19 with every big GTA day removed) |
+| Just compare the two lines over three years? | **Misleading**: both drift upwards, and two standard methods give 0.04 vs 0.30 |
+| Which comes first? | Same day. Hype is very slightly ahead, too little to matter |
+| Bangladesh | Around #60 of ~65 countries for "GTA 6" searches, but compared with launch week, trailers hit Bangladesh about **2.5–4× harder** than the world. Bangladesh watched the trailers; the world bought the game |
 
 ## How it is built
 

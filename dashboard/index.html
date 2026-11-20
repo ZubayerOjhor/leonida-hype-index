@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leonida Hype Index</title>
-<meta name="description" content="Did GTA VI hype move Take-Two's stock? An event study and correlation analysis of trailers, delays and launch, using Wikipedia attention, Google Trends and market data.">
-<meta property="og:title" content="Leonida Hype Index">
-<meta property="og:description" content="Trailers move eyeballs. Delays move the stock. A data look at GTA VI hype vs Take-Two.">
+<meta name="description" content="GTA VI is the most hyped game ever. When fans got excited, did investors get excited too? A plain-language data story using three years of public data.">
+<meta property="og:title" content="Leonida Hype Index: did GTA VI hype move the money?">
+<meta property="og:description" content="Fans got excited about trailers. Investors only reacted to news about money. A data story in plain words.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l4.2 9.2 10 1-7.5 6.8 2.2 9.8L16 23.8 7.1 28.8l2.2-9.8L1.8 12.2l10-1z' fill='%23ff5aa8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +16,20 @@
 </head>
 <body>
 
-<header class="hero">
+<header class="hero" id="top">
   <div class="sun" aria-hidden="true"></div>
   <div class="palms" aria-hidden="true"></div>
   <div class="hero-inner">
-    <div class="kicker">Fan-made data project · Vice City, Leonida</div>
+    <div class="kicker">A fan-made data story · Vice City, Leonida</div>
     <h1>Leonida<br><span>Hype Index</span></h1>
-    <p class="lede">GTA VI took 13 years and broke every trailer record. It came out on 19 November 2026.
-      Did all that hype actually move Take-Two's share price? Here's what three years of public data show.</p>
+    <p class="lede">GTA VI is the most hyped video game ever made. It finally came out on 19 November 2026.
+      The company that owns it sells shares on the stock market, so investors were watching too.</p>
+    <p class="question">When fans got excited, did investors get excited too?</p>
+    <div class="verdict">
+      <div class="verdict-label">Short answer</div>
+      <div class="verdict-text">Not really. Fans went wild for trailers. Investors only reacted to news about <em>money</em>: delays, sales and reviews.</div>
+      <a class="verdict-cta" href="#answer">See the evidence ↓</a>
+    </div>
     <div class="mission" id="mission">
       <div class="mission-title">Mission passed</div>
       <div class="mission-sub" id="mission-sub">GTA VI is out</div>
@@ -31,113 +37,182 @@
   </div>
 </header>
 
+<nav class="jump" id="jump" aria-label="Sections">
+  <div class="jump-inner">
+    <a href="#answer">The answer</a>
+    <a href="#who">Who's who</a>
+    <a href="#timeline">3 years in 2 charts</a>
+    <a href="#days">Every GTA day</a>
+    <a href="#busy">Busy, not up</a>
+    <a href="#bangladesh">Bangladesh</a>
+    <a href="#how">How we know</a>
+  </div>
+</nav>
+
 <main>
   <section class="tiles" id="tiles" aria-label="Headline numbers"></section>
 
-  <section class="block">
-    <div class="eyebrow">The answer</div>
-    <h2>Trailers move eyeballs. Delays move the stock.</h2>
-    <div class="findings" id="findings"></div>
+  <section class="block" id="answer">
+    <div class="eyebrow">01 · The answer</div>
+    <h2>Fans buy excitement. Investors buy money.</h2>
+    <p class="note">Four things the data shows, in plain words. Each one links to the evidence further down.</p>
+    <div class="findings four" id="findings"></div>
+    <div class="takeaway" id="takeaway"></div>
   </section>
 
-  <section class="block">
-    <div class="eyebrow">Mission log</div>
-    <h2>Three years of hype, one day at a time</h2>
-    <p class="note">Top: daily views of the English Wikipedia article on GTA VI (log scale), a clean measure of public attention.
-      Bottom: Take-Two (TTWO) closing price. Separate charts, same dates. Pins mark GTA moments; gold pins are delays.</p>
+  <section class="block" id="who">
+    <div class="eyebrow">02 · Who's who</div>
+    <h2>Three names you need to know</h2>
+    <div class="who">
+      <div class="who-card">
+        <div class="who-icon" aria-hidden="true">🎮</div>
+        <h3>Rockstar Games</h3>
+        <p>The studio that makes Grand Theft Auto. GTA V (2013) is one of the best-selling games ever.</p>
+      </div>
+      <div class="who-arrow" aria-hidden="true">owned by →</div>
+      <div class="who-card">
+        <div class="who-icon" aria-hidden="true">🏢</div>
+        <h3>Take-Two Interactive</h3>
+        <p>The company that owns Rockstar. Anyone can buy a small piece of it, called a <span class="term" tabindex="0" data-tip="A share is a tiny piece of a company. Its price goes up when more people want to buy it than sell it.">share</span>, on the US stock market under the code <b>TTWO</b>.
+          If people expect GTA to earn more, they pay more for the shares.</p>
+      </div>
+      <div class="who-arrow" aria-hidden="true">compared with →</div>
+      <div class="who-card">
+        <div class="who-icon" aria-hidden="true">📊</div>
+        <h3>The whole market</h3>
+        <p>The <span class="term" tabindex="0" data-tip="The S&P 500: the 500 biggest US companies together. We use a fund that tracks it (SPY).">S&amp;P 500</span>, 500 big US companies together.
+          On a day when <em>every</em> share went up, Take-Two going up isn't GTA news. So we always ask: did Take-Two do better or worse than the market?</p>
+      </div>
+    </div>
+    <div class="measure">
+      <b>How do you measure hype?</b> We count how many people read the GTA VI page on Wikipedia each day, and how often people searched "GTA 6" on Google.
+      More readers and searches = more people curious about the game.
+    </div>
+  </section>
+
+  <section class="block" id="timeline">
+    <div class="eyebrow">03 · Three years in two charts</div>
+    <h2>The hype, and the share price</h2>
+    <p class="note">Top: how many people read about GTA VI each day. Bottom: Take-Two's share price on the same dates.
+      Pins mark the big GTA moments. Hover or tap a pin to see what happened.</p>
+    <div class="legend" id="type-legend-1"></div>
     <div class="ranges" role="group" aria-label="Date range" id="ranges">
-      <button data-r="all" class="on">All</button>
+      <button data-r="all" class="on">All 3 years</button>
       <button data-r="2025">2025</button>
       <button data-r="2026">2026</button>
       <button data-r="launch">Launch month</button>
     </div>
-    <div class="card"><div class="chart-title">Attention · Wikipedia views per day</div><div id="c-attn" class="chart tall"></div></div>
-    <div class="card"><div class="chart-title">Take-Two (TTWO) · close, USD</div><div id="c-price" class="chart"></div></div>
+    <div class="card"><div class="chart-title">The hype · people reading GTA VI's Wikipedia page, per day</div><div id="c-attn" class="chart tall"></div>
+      <p class="note small">The scale jumps by 10× at each line (1k, 10k, 100k, 1M), so small and huge days both fit.</p></div>
+    <div class="card"><div class="chart-title">The money · Take-Two share price (US$)</div><div id="c-price" class="chart"></div>
+      <p class="note small" id="price-note"></p></div>
   </section>
 
-  <section class="block">
-    <div class="eyebrow">Event study</div>
-    <h2>What each moment did to the stock</h2>
-    <p class="note">Abnormal return = TTWO's move minus what the market (S&amp;P 500, SPY) predicts for it that day, fitted on the 120 trading days before each event.
-      It isolates the GTA news from the rest of the market.</p>
-    <div class="legend" id="type-legend"></div>
-    <div class="card"><div class="chart-title">Abnormal return on the reaction day</div><div id="c-events" class="chart tall"></div></div>
+  <section class="block" id="days">
+    <div class="eyebrow">04 · Every GTA day</div>
+    <h2>What each big moment did to the shares</h2>
+    <p class="note">For every big GTA day: how much better (+) or worse (−) Take-Two's shares did than the whole market that day.
+      A bar near zero means investors didn't care.</p>
+    <div class="legend" id="type-legend-2"></div>
+    <div class="card"><div class="chart-title">Take-Two vs the whole market, on the day of each moment</div><div id="c-events" class="chart tall"></div></div>
     <div class="table-wrap">
       <table class="events" id="events-table">
-        <thead><tr><th>Reaction day</th><th>Moment</th><th class="n">TTWO</th><th class="n">vs market</th><th class="n">Volume</th><th class="n">Attention</th></tr></thead>
+        <thead><tr>
+          <th>Day</th><th>What happened</th>
+          <th class="n">Shares moved</th>
+          <th class="n"><span class="term" tabindex="0" data-tip="Take-Two's move with the whole market's move taken out. This is the part that's about GTA.">Vs the market</span></th>
+          <th class="n"><span class="term" tabindex="0" data-tip="How many shares were bought and sold that day, compared with a normal day. 3× = three times as busy.">Trading</span></th>
+          <th class="n"><span class="term" tabindex="0" data-tip="How many people read about GTA VI that day, compared with a normal day.">Interest</span></th>
+        </tr></thead>
         <tbody></tbody>
       </table>
     </div>
   </section>
 
-  <section class="block">
-    <div class="eyebrow">Correlation lab</div>
-    <h2>How to correlate hype with a stock without fooling yourself</h2>
-    <p class="note">Attention and price both drift over three years, so comparing them raw can make a link appear or vanish by accident.
-      The fix: compare <em>surprises</em> (today vs the usual level), not levels.</p>
-    <div class="trap" id="trap"></div>
+  <section class="block" id="busy">
+    <div class="eyebrow">05 · Busy, not up</div>
+    <h2>Hype makes the market busy, not happy</h2>
+    <p class="note">Looking at all 740+ trading days, not just the big ones: when interest in GTA jumps, do the shares go up?</p>
+    <div class="meters" id="meters"></div>
     <div class="two">
       <div class="card">
-        <div class="chart-title">Attention surprise vs trading volume surprise (each trading day)</div>
+        <div class="chart-title">Every trading day: extra interest vs extra trading</div>
         <div id="c-scatter" class="chart tall"></div>
-        <p class="note small">Each dot is one trading day: how far attention and TTWO volume were above or below their usual level.
-          The cloud tilts up and to the right; GTA moments sit at the far edge.</p>
+        <p class="note small">Each dot is one day. Further right = more people reading about GTA than usual. Higher = more shares traded than usual.
+          The dots drift up as they go right: busy hype days are busy trading days.</p>
       </div>
       <div class="card">
-        <div class="chart-title">Who moves first? Correlation by lag (days)</div>
+        <div class="chart-title">Which comes first: the hype or the trading?</div>
         <div id="c-lag" class="chart tall"></div>
         <p class="note small" id="lag-note"></p>
       </div>
     </div>
   </section>
 
-  <section class="block">
-    <div class="eyebrow">Dhaka check</div>
+  <section class="block" id="bangladesh">
+    <div class="eyebrow">06 · Bangladesh</div>
     <h2>Bangladesh vs the world</h2>
-    <p class="note">Google search interest in "GTA 6" by week. Each line is scaled to its own peak (100), so this compares the <em>shape</em> of the hype, not its size.</p>
+    <p class="note">Google searches for "GTA 6", week by week. Each line is scaled so its own busiest week = 100.
+      That lets us compare <em>when</em> people got excited, not how many people there are.</p>
     <div class="two">
-      <div class="card"><div class="chart-title">Weekly search interest, indexed to each peak = 100</div><div id="c-bd" class="chart tall"></div></div>
-      <div class="card"><div class="chart-title">Search interest by country, last 12 months (UK = 100)</div><div id="c-sa" class="chart tall"></div></div>
+      <div class="card"><div class="chart-title">Searches for "GTA 6" each week (busiest week = 100)</div><div id="c-bd" class="chart tall"></div></div>
+      <div class="card"><div class="chart-title">Which countries searched most? Last 12 months (top country = 100)</div><div id="c-sa" class="chart tall"></div></div>
     </div>
     <div class="findings" id="bd-findings"></div>
   </section>
 
-  <section class="block method">
-    <div class="eyebrow">Method &amp; sources</div>
-    <h2>How it was built</h2>
+  <section class="block method" id="how">
+    <div class="eyebrow">07 · How we know</div>
+    <h2>Where the numbers come from</h2>
     <div class="cols">
       <div>
-        <h3>Data (all public, free)</h3>
+        <h3>Data (all free and public)</h3>
         <ul>
-          <li><b>Attention:</b> Wikimedia pageviews API, English article "Grand Theft Auto VI", users only, daily. The article went live on 4–5 Dec 2023.</li>
-          <li><b>Market:</b> Yahoo Finance daily TTWO and SPY, adjusted close and volume.</li>
-          <li><b>Search:</b> Google Trends "GTA 6", weekly, worldwide and Bangladesh; country ranking for the last 12 months.</li>
-          <li><b>Launch facts:</b> third-party reports, linked on each event. Sales figures are Sensor Tower estimates, not Take-Two numbers.</li>
+          <li><b>Interest:</b> daily readers of the English Wikipedia page "Grand Theft Auto VI" (the page went live with Trailer 1 in Dec 2023).</li>
+          <li><b>Share prices:</b> Take-Two (TTWO) and the S&amp;P 500 fund (SPY), daily, from Yahoo Finance.</li>
+          <li><b>Searches:</b> Google Trends for "GTA 6", worldwide and Bangladesh.</li>
+          <li><b>Sales and reviews:</b> news reports, linked on each moment. Sales are estimates, not official numbers.</li>
         </ul>
       </div>
       <div>
-        <h3>Method</h3>
+        <h3>Things to keep in mind</h3>
         <ul>
-          <li><b>Event study:</b> market model (TTWO on SPY) fitted on trading days −130 to −10; abnormal return on the reaction day (news after the close counts the next day).</li>
-          <li><b>Volume and attention ratios:</b> reaction day vs the median of the previous 60 trading days / 30 calendar days.</li>
-          <li><b>Correlation:</b> Pearson and Spearman on daily surprises (log value minus its trailing baseline); weekend views roll into Monday.</li>
-          <li><b>Wanted level:</b> 20-day volatility of TTWO, ranked against its own 2023–26 history (5 stars = top 5%).</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Caveats</h3>
-        <ul>
-          <li>Only about 10 events. Treat averages as stories, not laws.</li>
-          <li>Correlation is not causation: earnings news and hype often land on the same day.</li>
-          <li>Wikipedia attention skews to English-reading audiences.</li>
-          <li>Not affiliated with Rockstar Games or Take-Two Interactive. Not investment advice.</li>
+          <li>There are only about ten big moments, so treat the averages as a story, not a law.</li>
+          <li>Two things happening together doesn't prove one caused the other.</li>
+          <li>Wikipedia readers lean towards English speakers.</li>
+          <li>Fan project. Not linked to Rockstar Games or Take-Two. Not investment advice.</li>
         </ul>
       </div>
     </div>
+    <details class="nerd">
+      <summary>For the data-curious: the methods and terms</summary>
+      <div class="cols">
+        <div>
+          <h3>Methods</h3>
+          <ul>
+            <li><b>Event study.</b> "Vs the market" is the <i>abnormal return</i>: Take-Two's daily return minus what a market model (TTWO regressed on SPY) predicts, fitted on trading days −130 to −10 before each event. News after the US close counts on the next trading day.</li>
+            <li><b>Trading and interest (× normal).</b> That day's volume ÷ median of the previous 60 trading days; that day's Wikipedia views ÷ median of the previous 30 days.</li>
+            <li><b>Surprises, not levels.</b> Section 05 correlates the log of each day's value minus its trailing baseline, because both raw series trend over time and would give a misleading answer. Weekend views roll into Monday.</li>
+            <li><b>Wanted level.</b> 20-day volatility of Take-Two's daily returns (annualised), ranked against its own 2023–26 history: 5 stars = top 5%.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Terms</h3>
+          <ul>
+            <li><b>r (correlation)</b>: how closely two things move together, from 0 (not at all) to 1 (perfectly). Roughly: under 0.1 none, 0.1–0.3 weak, 0.3–0.5 moderate, above 0.5 strong.</li>
+            <li><b>Pearson vs Spearman</b>: two ways to measure r. Spearman only looks at the order of values, so a few huge days count less.</li>
+            <li><b>Lag</b>: comparing today's hype with trading a few days later (or earlier) to see which moves first.</li>
+            <li>Code and full method: <a href="https://github.com/ZubayerOjhor/leonida-hype-index" target="_blank" rel="noopener">GitHub repository</a>.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="nerd-stats" id="nerd-stats"></div>
+    </details>
     <p class="foot" id="foot"></p>
   </section>
 </main>
 
+<a class="to-top" href="#top" aria-label="Back to top">↑</a>
 <script src="app.js"></script>
 </body>
 </html>
