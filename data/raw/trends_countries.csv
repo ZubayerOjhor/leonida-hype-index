@@ -1,40 +1,40 @@
 country,interest
 Netherlands,100
-United Kingdom,98
-Germany,86
+United Kingdom,99
+Germany,85
 France,82
-United States,79
+United States,78
 Norway,77
 Australia,76
-Ireland,75
-Denmark,74
+Denmark,76
+Ireland,74
 Poland,72
 Lithuania,71
-New Zealand,70
-Sweden,70
+New Zealand,71
 Belgium,70
-Canada,68
+Sweden,69
 Austria,67
-Romania,64
+Canada,67
 Switzerland,64
-Czechia,62
-Hungary,61
+Romania,62
+Hungary,62
+Czechia,61
 Finland,59
-Portugal,59
+Portugal,58
 Brazil,55
 Tunisia,51
 Chile,50
 Croatia,50
 Spain,49
-Slovakia,49
+Slovakia,48
 Italy,47
 Pakistan,44
 Mexico,44
-South Africa,44
-Dominican Republic,42
+South Africa,43
+Serbia,43
 Costa Rica,42
-Serbia,42
 Bulgaria,41
+Dominican Republic,41
 Israel,38
 Argentina,38
 Morocco,37
@@ -45,7 +45,7 @@ Greece,33
 Türkiye,32
 Sri Lanka,31
 Singapore,28
-Venezuela,27
+Venezuela,28
 Iraq,25
 Philippines,25
 Peru,25
