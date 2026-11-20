@@ -3,14 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leonida Hype Index</title>
+<title>GTA VI: Hype vs Money</title>
 <meta name="description" content="GTA VI is the most hyped game ever. When fans got excited, did investors get excited too? A plain-language data story using three years of public data.">
-<meta property="og:title" content="Leonida Hype Index: did GTA VI hype move the money?">
+<meta property="og:title" content="GTA VI broke the internet. Did it move the money?">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zubayerojhor.github.io/leonida-hype-index/">
+<meta property="og:image" content="https://zubayerojhor.github.io/leonida-hype-index/social.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GTA VI broke the internet. Did it move the money?">
+<meta name="twitter:image" content="https://zubayerojhor.github.io/leonida-hype-index/social.png">
 <meta property="og:description" content="Fans got excited about trailers. Investors only reacted to news about money. A data story in plain words.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l4.2 9.2 10 1-7.5 6.8 2.2 9.8L16 23.8 7.1 28.8l2.2-9.8L1.8 12.2l10-1z' fill='%23ff5aa8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 </head>
@@ -20,10 +28,14 @@
   <div class="sun" aria-hidden="true"></div>
   <div class="palms" aria-hidden="true"></div>
   <div class="hero-inner">
-    <h1>Leonida<br><span>Hype Index</span></h1>
-    <p class="lede">GTA VI is the most hyped video game ever made. It finally came out on 19 November 2026.
-      The company that owns it sells shares on the stock market, so investors were watching too. This fan-made data story follows both.</p>
-    <p class="question">When fans got excited, did investors get excited too?</p>
+    <h1>GTA VI broke <br>the internet.<span>Did it move the money?</span></h1>
+    <p class="lede">The most hyped video game ever finally came out on 19 November 2026. Its owner, Take-Two, sells shares on the stock market,
+      so investors were watching too. When fans got excited, did investors get excited too? This fan-made data story follows both.</p>
+    <div class="hero-chips" aria-label="GTA VI in numbers">
+      <div class="hchip"><b>475M</b><span>Trailer 2 views in 24 hours</span></div>
+      <div class="hchip"><b>13 yrs</b><span>since GTA V</span></div>
+      <div class="hchip"><b>750K</b><span>people read about it on launch day</span></div>
+    </div>
     <div class="verdict">
       <div class="verdict-label">Short answer</div>
       <div class="verdict-text">Not really. Fans went wild for trailers. Investors only reacted to news about <em>money</em>: delays, sales and reviews.</div>
@@ -38,6 +50,7 @@
 
 <nav class="jump" id="jump" aria-label="Sections">
   <div class="jump-inner">
+    <a class="brand" href="#top" aria-label="Leonida Hype Index, back to top"><span class="brand-mark" aria-hidden="true">★</span><span class="brand-name">Leonida<br><small>Hype Index</small></span></a>
     <a href="#answer">The answer</a>
     <a href="#who">Who's who</a>
     <a href="#timeline">3 years in 2 charts</a>
@@ -52,7 +65,7 @@
   <section class="tiles" id="tiles" aria-label="Headline numbers"></section>
 
   <section class="block" id="answer">
-    <div class="eyebrow">The answer</div>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span class="eyebrow">The answer</span></div>
     <h2>Fans buy excitement. Investors buy money.</h2>
     <p class="note">Four things the data shows, in plain words. Each one links to the evidence further down.</p>
     <div class="findings four" id="findings"></div>
@@ -60,23 +73,23 @@
   </section>
 
   <section class="block" id="who">
-    <div class="eyebrow">Who's who</div>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.9.8 3.1 2.5 3.5 5.2"/></svg></span><span class="eyebrow">Who's who</span></div>
     <h2>Three names you need to know</h2>
     <div class="who">
-      <div class="who-card">
+      <div class="who-card lift">
         <div class="who-icon" aria-hidden="true">🎮</div>
         <h3>Rockstar Games</h3>
         <p>The studio that makes Grand Theft Auto. GTA V (2013) is one of the best-selling games ever.</p>
       </div>
       <div class="who-arrow" aria-hidden="true">owned by →</div>
-      <div class="who-card">
+      <div class="who-card lift">
         <div class="who-icon" aria-hidden="true">🏢</div>
         <h3>Take-Two Interactive</h3>
         <p>The company that owns Rockstar. Anyone can buy a small piece of it, called a <span class="term" tabindex="0" data-tip="A share is a tiny piece of a company. Its price goes up when more people want to buy it than sell it.">share</span>, on the US stock market under the code <b>TTWO</b>.
           If people expect GTA to earn more, they pay more for the shares.</p>
       </div>
       <div class="who-arrow" aria-hidden="true">compared with →</div>
-      <div class="who-card">
+      <div class="who-card lift">
         <div class="who-icon" aria-hidden="true">📊</div>
         <h3>The whole market</h3>
         <p>The <span class="term" tabindex="0" data-tip="The S&P 500: the 500 biggest US companies together. We use a fund that tracks it (SPY).">S&amp;P 500</span>, 500 big US companies together.
@@ -90,7 +103,7 @@
   </section>
 
   <section class="block" id="timeline">
-    <div class="eyebrow">Three years in two charts</div>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="eyebrow">Three years in two charts</span></div>
     <h2>The hype, and the share price</h2>
     <p class="note">Top: how many people read about GTA VI each day. Bottom: Take-Two's share price on the same dates.
       Pins mark the big GTA moments. Hover or tap a pin to see what happened.</p>
@@ -108,7 +121,7 @@
   </section>
 
   <section class="block" id="days">
-    <div class="eyebrow">Every GTA day</div>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span class="eyebrow">Every GTA day</span></div>
     <h2>What each big moment did to the shares</h2>
     <p class="note">For every big GTA day: how much better (+) or worse (−) Take-Two's shares did than the whole market that day.
       A bar near zero means investors didn't care.</p>
@@ -129,7 +142,7 @@
   </section>
 
   <section class="block" id="busy">
-    <div class="eyebrow">Busy, not up</div>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12h4l3-8 6 16 3-8h4"/></svg></span><span class="eyebrow">Busy, not up</span></div>
     <h2>Hype makes the market busy, not happy</h2>
     <p class="note">Looking at all 740+ trading days, not just the big ones: when interest in GTA jumps, do the shares go up?</p>
     <div class="meters" id="meters"></div>
@@ -149,7 +162,7 @@
   </section>
 
   <section class="block" id="bangladesh">
-    <div class="eyebrow">Bangladesh</div>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="eyebrow">Bangladesh</span></div>
     <h2>Bangladesh vs the world</h2>
     <p class="note">Google searches for "GTA 6", week by week. Each line is scaled so its own busiest week = 100.
       That lets us compare <em>when</em> people got excited, not how many people there are.</p>
@@ -161,7 +174,7 @@
   </section>
 
   <section class="block method" id="how">
-    <div class="eyebrow">How we know</div>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg></span><span class="eyebrow">How we know</span></div>
     <h2>Where the numbers come from</h2>
     <div class="cols">
       <div>

@@ -35,7 +35,7 @@
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const strength = (r) => { const a = Math.abs(r); return a < 0.1 ? "No link" : a < 0.3 ? "Weak link" : a < 0.5 ? "Moderate link" : "Strong link"; };
 
-  const baseText = { color: C.text2, fontFamily: "Inter, system-ui, sans-serif", fontSize: 12 };
+  const baseText = { color: C.text2, fontFamily: "Manrope, system-ui, sans-serif", fontSize: 12 };
   const axisCommon = {
     axisLine: { lineStyle: { color: C.line } },
     axisTick: { show: false },
@@ -44,8 +44,8 @@
   };
   const tooltipBase = {
     backgroundColor: C.surface2, borderColor: C.line, borderWidth: 1, padding: [8, 10], confine: true,
-    textStyle: { color: C.text, fontSize: 12, fontFamily: "Inter, system-ui, sans-serif" },
-    extraCssText: "border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.4);max-width:280px;white-space:normal;",
+    textStyle: { color: C.text, fontSize: 12, fontFamily: "Manrope, system-ui, sans-serif" },
+    extraCssText: "border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.5);max-width:280px;white-space:normal;backdrop-filter:blur(8px);",
   };
   const charts = [];
   const mk = (id) => { const c = echarts.init(document.getElementById(id), null, { renderer: "canvas" }); charts.push(c); return c; };
@@ -63,7 +63,7 @@
   if (day < 1) document.querySelector(".mission-title").textContent = "Mission in progress";
 
   /* ---------- jump menu: highlight the section on screen ---------- */
-  const links = [...document.querySelectorAll("#jump a")];
+  const links = [...document.querySelectorAll("#jump a:not(.brand)")];
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
       if (!en.isIntersecting) return;
@@ -86,8 +86,17 @@
     { label: "Wanted level", value: `<span class="stars" aria-label="${H.stars_now} of 5 stars">${stars(H.stars_now)}</span>`,
       sub: `<span class="term" tabindex="0" data-tip="How much Take-Two's share price is jumping around day to day (last 20 days), compared with the past three years. 5 stars = among the wildest 5% of days.">Share price is ${starText}</span> right now` },
   ];
-  document.getElementById("tiles").innerHTML = tiles.map((t) =>
-    `<div class="tile"><div class="label">${t.label}</div><div class="value">${t.value}</div><div class="sub">${t.sub}</div></div>`).join("");
+  const ICON = {
+    money: '<path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+    star: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/>',
+    eye: '<path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/>',
+    chart: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+    siren: '<path d="M7 18v-6a5 5 0 0 1 10 0v6"/><path d="M4 18h16v3H4zM12 2v2M4.2 5.2l1.4 1.4M19.8 5.2l-1.4 1.4"/>',
+  };
+  const tileMeta = [["money", "gold"], ["star", "violet"], ["eye", "pink"], ["chart", "blue"], ["siren", "teal"]];
+  document.getElementById("tiles").innerHTML = tiles.map((t, i) =>
+    `<div class="tile lift"><div class="tile-top"><span class="tile-ic ${tileMeta[i][1]}" aria-hidden="true"><svg viewBox="0 0 24 24">${ICON[tileMeta[i][0]]}</svg></span>
+      <div class="label">${t.label}</div></div><div class="value">${t.value}</div><div class="sub">${t.sub}</div></div>`).join("");
 
   /* ---------- the answer ---------- */
   const trailers = ev.filter((e) => e.type === "trailer");
@@ -111,7 +120,7 @@
       head: "Hype makes the market busy, not happy",
       p: "When interest in GTA jumps, far more shares change hands than usual. But hype can't tell you whether the price will go up or down.",
       href: "#busy" },
-  ].map((f) => `<div class="finding" style="--accent:${f.accent}"><div class="big">${f.big}${f.small ? `<small>${f.small}</small>` : ""}</div>
+  ].map((f) => `<div class="finding lift" style="--accent:${f.accent}"><div class="big">${f.big}${f.small ? `<small>${f.small}</small>` : ""}</div>
       <div class="headline">${f.head}</div><p>${f.p}</p><a class="more" href="${f.href}">See the evidence →</a></div>`).join("");
   const iT1 = D.series.date.indexOf(byKey.t1.date), iEnd = D.series.date.length - 1;
   const tt = D.series.close[iEnd] / D.series.close[iT1] - 1, mkt = D.series.spy[iEnd] / D.series.spy[iT1] - 1;
@@ -254,7 +263,7 @@
   ];
   document.getElementById("meters").innerHTML = meters.map((m) => {
     const w = Math.min(1, Math.abs(m.verdict === "Misleading" ? m.r.spearman : m.r.pearson) / 0.6) * 100;
-    return `<div class="meter ${m.win ? "win" : ""}">
+    return `<div class="meter lift ${m.win ? "win" : ""}">
       <div class="q">${m.q}</div>
       <div class="verdict2" style="color:${m.win ? C.hype : C.text}">${m.verdict}</div>
       <div class="bar" role="img" aria-label="${m.verdict}"><i style="width:${Math.max(w, 2)}%;background:${m.color}"></i></div>
@@ -360,7 +369,7 @@
         p: `Week by week, the ups and downs in Bangladesh closely matched the rest of the world (a ${strength(T.corr_changes.pearson).toLowerCase()}, r = ${T.corr_changes.pearson.toFixed(2)}). A small echo followed a week later.` },
       { big: `${x1.toFixed(1)}× / ${x2.toFixed(1)}×`, head: "Trailers hit harder in Bangladesh",
         p: `Compared with launch week, Trailer 1 got ${t1.bd} here vs ${t1.world} worldwide, and Trailer 2 got ${t2.bd} vs ${t2.world}. Pre-order week went the other way (${po.bd} vs ${po.world}). Bangladesh watched the trailers; the world bought the game.` },
-    ].map((f) => `<div class="finding" style="--accent:${BD}"><div class="big">${f.big}</div><div class="headline">${f.head}</div><p>${f.p}</p></div>`).join("");
+    ].map((f) => `<div class="finding lift" style="--accent:${BD}"><div class="big">${f.big}</div><div class="headline">${f.head}</div><p>${f.p}</p></div>`).join("");
     void echo;
   }
 

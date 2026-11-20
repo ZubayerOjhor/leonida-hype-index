@@ -1,4 +1,8 @@
-# Leonida Hype Index
+# GTA VI: Hype vs Money
+
+*The Leonida Hype Index: a fan-made data story.*
+
+![GTA VI broke the internet. Did it move the money?](dashboard/social.png)
 
 **The question.** GTA VI is the most hyped video game ever made. It finally came out on 19 November 2026.
 The company that owns its maker, Rockstar Games, is Take-Two Interactive, and anyone can buy its shares on the US
