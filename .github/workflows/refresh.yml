@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # lets the job start the Pages deploy (bot pushes don't trigger workflows)
 
 jobs:
   refresh:
@@ -29,3 +30,7 @@ jobs:
           git add data/raw dashboard/data
           git diff --cached --quiet || git commit -m "Data refresh $(date -u +%Y-%m-%d)"
           git push
+      - name: Redeploy the dashboard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main

@@ -16,7 +16,7 @@ All data is real and public. Nothing is simulated.
 | Trailer days (4 reveals) | Attention 8–11× normal, yet TTWO beat the market by only **+1.2%** on average |
 | Delay days (2 delays) | TTWO fell about **8% vs the market** each time, on 4–5× normal volume |
 | Review day (18 Nov 2026, Metacritic 99) | Attention 20× normal, TTWO **+6.5%** vs the market |
-| Launch day (19 Nov 2026) | TTWO **−2.6%** vs the market: sell the news |
+| Launch day (19 Nov 2026) | All-time attention peak (750k Wikipedia views, 29× normal), yet TTWO **−2.6%** vs the market: sell the news |
 | Control event (Google Project Genie, 30 Jan 2026) | TTWO **−7.8%** with *no* rise in GTA attention: the stock moves for reasons hype can't see |
 | Attention vs price, raw levels | r = 0.06 (Spearman 0.30). Two drifting series, unreliable |
 | Daily attention change vs daily return | r = −0.02. No directional link |
