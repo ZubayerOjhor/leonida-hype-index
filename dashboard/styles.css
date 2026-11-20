@@ -69,7 +69,7 @@ h1 {
   font-size: clamp(56px, 11vw, 132px); line-height: .88; margin: 14px 0 18px;
   letter-spacing: .01em; text-transform: uppercase;
   color: #fff;
-  text-shadow: 0 2px 0 #2a0a3a, 0 0 28px rgba(255, 90, 168, .55);
+  text-shadow: 0 3px 0 #2a0a3a, 0 6px 18px rgba(0, 0, 0, .35);
 }
 h1 span {
   background: linear-gradient(90deg, #ffe08a, #ff7ac0 55%, #b98bff);
@@ -80,7 +80,7 @@ h1 span {
 .lede { max-width: 620px; font-size: 17px; color: #fff3fa; margin: 0 0 26px; }
 .mission {
   display: inline-block; padding: 10px 18px 12px; border-radius: 4px;
-  background: rgba(13, 7, 24, .55); backdrop-filter: blur(4px);
+  background: rgba(13, 7, 24, .72); backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, .18);
 }
 .mission-title {
@@ -136,8 +136,8 @@ h3 { font-size: 14px; margin: 0 0 8px; color: var(--text); }
 .two + .findings { margin-top: 16px; }
 .finding {
   background: var(--surface); border: 1px solid var(--line-soft); border-radius: 10px; padding: 16px;
-  border-top: 3px solid var(--accent, var(--neon-pink));
 }
+.finding::before { content: ""; display: block; width: 32px; height: 4px; border-radius: 2px; background: var(--accent, var(--neon-pink)); margin-bottom: 12px; }
 .finding .big { font-family: var(--display); font-size: 40px; line-height: 1; }
 .finding .what { font-weight: 700; margin: 8px 0 4px; }
 .finding p { margin: 0; color: var(--text-2); font-size: 14px; }
@@ -157,7 +157,7 @@ h3 { font-size: 14px; margin: 0 0 8px; color: var(--text); }
 .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
 
 /* ---------- table ---------- */
-.table-wrap { overflow-x: auto; border: 1px solid var(--line-soft); border-radius: 10px; background: var(--surface); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line-soft); border-radius: 10px; background: var(--surface); padding: 6px 8px; }
 table.events { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
 .events th, .events td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
 .events th { font-size: 12px; color: var(--muted); font-weight: 600; background: var(--surface-2); }
@@ -197,7 +197,7 @@ table.events { width: 100%; border-collapse: collapse; font-size: 14px; min-widt
   .chart.tall { height: 300px; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .mission { animation: pop .7s cubic-bezier(.2, .9, .3, 1.2) .3s both; }
+  .mission { animation: pop .6s cubic-bezier(.25, 1, .5, 1) .3s both; }
   @keyframes pop { from { transform: scale(.85); opacity: 0; } to { transform: none; opacity: 1; } }
 }
 
@@ -211,7 +211,7 @@ section[id] { scroll-margin-top: 64px; }
 }
 .verdict {
   max-width: 620px; background: rgba(13, 7, 24, .72); backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, .16); border-left: 4px solid #ffd36b; border-radius: 8px;
+  border: 1px solid rgba(255, 211, 107, .45); border-radius: 10px;
   padding: 14px 18px 16px; margin-bottom: 18px;
 }
 .verdict-label { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #ffd36b; }
@@ -320,3 +320,6 @@ details.nerd .cols { padding: 16px; }
   .term::after { max-width: 220px; }
 }
 .tile .value small { font-family: Inter, sans-serif; font-size: 14px; font-weight: 600; color: var(--muted); margin-left: 2px; }
+@media (max-width: 1100px) and (min-width: 561px) {
+  .findings.four { grid-template-columns: 1fr 1fr; }
+}
