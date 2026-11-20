@@ -23,6 +23,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+import forecast
+
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "dashboard" / "data" / "hype.json"
@@ -267,13 +269,30 @@ def main() -> int:
             "vol20_now": round(float(wl["vol20"].iloc[-1]), 3),
         },
         "external": {  # third-party figures quoted on the page, with sources
-            "sales_estimate_usd": 1.84e9,
-            "copies_estimate": 19.05e6,
-            "sales_source": "https://www.gamespot.com/articles/gta-6-has-sold-almost-8-million-copies-so-far-and-ps5-is-dominating-the-split-of-course/",
+            "sales_estimate_usd": 2.36e9,
+            "copies_estimate": 24.5e6,
+            "sales_source": "https://www.tbsnews.net/bangla/international/news-details-568186",
+            "sales_source_name": "Sensor Tower via BBC / The Business Standard",
+            "dev_cost_usd": 1.0e9,
             "trailer1_24h_views": 93e6,
             "trailer2_24h_views": 475e6,
             "metacritic": 99,
+            # day-one money, compared (US$ billions)
+            "money_compare": [
+                {"label": "GTA V, day one (2013)", "value": 0.8, "kind": "past",
+                 "source": "https://www.fox5ny.com/news/gta-vi-pulls-estimated-1-84-billion-release-day-more-than-double-gta-vs-launch-record"},
+                {"label": "What investors wanted", "value": 1.9, "kind": "bar",
+                 "source": "https://finance.biggo.com/news/27aca2cb9e7c40f8"},
+                {"label": "GTA VI, first estimate", "value": 1.84, "kind": "gta6",
+                 "source": "https://www.gamespot.com/articles/gta-6-has-sold-almost-8-million-copies-so-far-and-ps5-is-dominating-the-split-of-course/"},
+                {"label": "GTA VI, latest estimate", "value": 2.36, "kind": "gta6",
+                 "source": "https://www.tbsnews.net/bangla/international/news-details-568186"},
+                {"label": "Spider-Man film, full run", "value": 2.5, "kind": "other",
+                 "source": "https://www.tbsnews.net/bangla/international/news-details-568186"},
+            ],
+            "niko_2026_b": 3.0,
         },
+        "forecast": forecast.build(),
         "events": events,
         "by_type": by_type,
         "correlations": cors,

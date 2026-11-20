@@ -347,3 +347,34 @@ details.nerd .cols { padding: 18px; }
   .mission { animation: pop .6s cubic-bezier(.25, 1, .5, 1) .3s both; }
   @keyframes pop { from { transform: scale(.9); opacity: 0; } to { transform: none; opacity: 1; } }
 }
+
+/* ================= v4: money story ================= */
+.scen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
+.scen-card { padding: 18px; position: relative; overflow: hidden; }
+.scen-card.mid {
+  background: linear-gradient(rgba(26, 12, 46, .82), rgba(26, 12, 46, .82)) padding-box, var(--grad-sunset) border-box;
+  border: 1.5px solid transparent;
+}
+.scen-card .tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; background: rgba(255, 255, 255, .08); color: var(--text-2); }
+.scen-card.mid .tag { background: var(--grad-sunset); color: #1b0f00; }
+.scen-card .total { font: 800 34px/1.05 var(--font-num); letter-spacing: -.02em; margin: 12px 0 2px; }
+.scen-card .total small { font: 700 13px var(--font); color: var(--muted); margin-left: 4px; letter-spacing: 0; }
+.scen-card .copies { font-size: 13px; color: var(--text-2); font-weight: 700; }
+.scen-card p { margin: 10px 0 0; color: var(--text-2); font-size: 14px; }
+.qa { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
+.qa-card { padding: 18px; }
+.qa-card .q { font: 700 15px/1.35 var(--font-num); color: var(--text-2); }
+.qa-card .a { font-family: var(--display); font-size: 40px; text-transform: uppercase; line-height: 1; margin: 10px 0 8px; }
+.qa-card .a.yes { color: #7fe3a4; } .qa-card .a.no { color: #ff8f8f; } .qa-card .a.so { color: var(--gold); }
+.qa-card p { margin: 0; color: var(--text-2); font-size: 14px; }
+.scen-card, .qa-card {
+  background: var(--glass); border: 1px solid var(--glass-line); border-radius: var(--r);
+  backdrop-filter: blur(16px) saturate(1.35); -webkit-backdrop-filter: blur(16px) saturate(1.35); box-shadow: var(--shadow);
+}
+.scen-card.mid { background: linear-gradient(rgba(26, 12, 46, .82), rgba(26, 12, 46, .82)) padding-box, var(--grad-sunset) border-box; border: 1.5px solid transparent; }
+table.fc { min-width: 560px; }
+.fc td:first-child { font-family: var(--font-num); font-weight: 700; }
+.fc td.mid { color: var(--gold); }
+@media (max-width: 960px) { .scen, .qa { grid-template-columns: 1fr; } }
+
+@media (max-width: 560px) { .br-wide { display: none; } }

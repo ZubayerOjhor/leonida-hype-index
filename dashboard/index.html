@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI: Hype vs Money</title>
-<meta name="description" content="GTA VI is the most hyped game ever. When fans got excited, did investors get excited too? A plain-language data story using three years of public data.">
-<meta property="og:title" content="GTA VI broke the internet. Did it move the money?">
+<title>GTA VI: Did It Print Money?</title>
+<meta name="description" content="Everyone said GTA VI would print money. Did it? Day-one sales vs forecasts, a 2026-2035 scenario, and why Take-Two's shares barely moved. A plain-language data story.">
+<meta property="og:title" content="Everyone said GTA VI would print money. Did it?">
+<meta property="og:description" content="$2.36B on day one, a 2026-2035 forecast, and why the stock market wasn't impressed. A fan-made data story in plain words.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zubayerojhor.github.io/leonida-hype-index/">
 <meta property="og:image" content="https://zubayerojhor.github.io/leonida-hype-index/social.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GTA VI broke the internet. Did it move the money?">
+<meta name="twitter:title" content="Everyone said GTA VI would print money. Did it?">
 <meta name="twitter:image" content="https://zubayerojhor.github.io/leonida-hype-index/social.png">
-<meta property="og:description" content="Fans got excited about trailers. Investors only reacted to news about money. A data story in plain words.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l4.2 9.2 10 1-7.5 6.8 2.2 9.8L16 23.8 7.1 28.8l2.2-9.8L1.8 12.2l10-1z' fill='%23ff5aa8'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,18 +28,14 @@
   <div class="sun" aria-hidden="true"></div>
   <div class="palms" aria-hidden="true"></div>
   <div class="hero-inner">
-    <h1>GTA VI broke <br>the internet.<span>Did it move the money?</span></h1>
-    <p class="lede">The most hyped video game ever finally came out on 19 November 2026. Its owner, Take-Two, sells shares on the stock market,
-      so investors were watching too. When fans got excited, did investors get excited too? This fan-made data story follows both.</p>
-    <div class="hero-chips" aria-label="GTA VI in numbers">
-      <div class="hchip"><b>475M</b><span>Trailer 2 views in 24 hours</span></div>
-      <div class="hchip"><b>13 yrs</b><span>since GTA V</span></div>
-      <div class="hchip"><b>750K</b><span>people read about it on launch day</span></div>
-    </div>
+    <h1>Everyone said GTA&nbsp;VI <br class="br-wide">would print money.<span>Did it?</span></h1>
+    <p class="lede">GTA VI came out on 19 November 2026, after 13 years and record-breaking trailers. Analysts promised the biggest launch in entertainment history.
+      This fan-made data story checks the numbers: the sales, the next ten years, and what the stock market thinks.</p>
+    <div class="hero-chips" aria-label="GTA VI in numbers" id="hero-chips"></div>
     <div class="verdict">
       <div class="verdict-label">Short answer</div>
-      <div class="verdict-text">Not really. Fans went wild for trailers. Investors only reacted to news about <em>money</em>: delays, sales and reviews.</div>
-      <a class="verdict-cta" href="#answer">See the evidence ↓</a>
+      <div class="verdict-text" id="verdict-text">Yes, and then some.</div>
+      <a class="verdict-cta" href="#answer">See the numbers ↓</a>
     </div>
     <div class="mission" id="mission">
       <div class="mission-title">Mission passed</div>
@@ -52,8 +48,10 @@
   <div class="jump-inner">
     <a class="brand" href="#top" aria-label="Leonida Hype Index, back to top"><span class="brand-mark" aria-hidden="true">★</span><span class="brand-name">Leonida<br><small>Hype Index</small></span></a>
     <a href="#answer">The answer</a>
+    <a href="#money">Day one</a>
+    <a href="#forecast">2026–2035</a>
     <a href="#who">Who's who</a>
-    <a href="#timeline">3 years in 2 charts</a>
+    <a href="#timeline">Hype vs shares</a>
     <a href="#days">Every GTA day</a>
     <a href="#busy">Busy, not up</a>
     <a href="#bangladesh">Bangladesh</a>
@@ -66,20 +64,43 @@
 
   <section class="block" id="answer">
     <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></span><span class="eyebrow">The answer</span></div>
-    <h2>Fans buy excitement. Investors buy money.</h2>
+    <h2>It's printing money. The stock market already knew.</h2>
     <p class="note">Four things the data shows, in plain words. Each one links to the evidence further down.</p>
     <div class="findings four" id="findings"></div>
     <div class="takeaway" id="takeaway"></div>
   </section>
 
+  <section class="block" id="money">
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><span class="eyebrow">Day one</span></div>
+    <h2>Day one beat what investors asked for</h2>
+    <p class="note">Money spent on GTA VI on its first day (including pre-orders), next to the numbers people compared it with. All in US$ billions.</p>
+    <div class="card"><div class="chart-title">First-day money, compared (US$ billions)</div><div id="c-money" class="chart"></div>
+      <p class="note small" id="money-note"></p></div>
+  </section>
+
+  <section class="block" id="forecast">
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M6 16v-4M11 16V8M16 16v-6M21 16V5"/></svg></span><span class="eyebrow">2026–2035</span></div>
+    <h2>How much could GTA VI make by 2035?</h2>
+    <p class="note">Nobody knows yet, so here are three paths. Each one starts from GTA VI's real first day, then follows how GTA V kept selling for years after its own launch in 2013.
+      The difference between the paths is how strongly GTA VI keeps selling after the launch rush.</p>
+    <div class="scen" id="scen"></div>
+    <div class="card"><div class="chart-title">Money from selling copies, each year (US$ billions) · bar = middle path, line = low to high</div><div id="c-forecast" class="chart tall"></div>
+      <p class="note small">Copies only. GTA V's online mode later earned billions on top, but Take-Two doesn't publish those numbers, so they're left out.
+        This is a scenario, not a promise. It will be updated when Take-Two reports real sales.</p></div>
+    <div class="table-wrap">
+      <table class="events fc" id="fc-table"><thead><tr><th>Year</th><th class="n">Low</th><th class="n">Middle</th><th class="n">High</th><th class="n">Copies (middle)</th><th class="n">Avg money per copy</th></tr></thead><tbody></tbody></table>
+    </div>
+  </section>
+
   <section class="block" id="who">
     <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c1.9.8 3.1 2.5 3.5 5.2"/></svg></span><span class="eyebrow">Who's who</span></div>
-    <h2>Three names you need to know</h2>
+    <h2>So why didn't the shares jump?</h2>
+    <p class="note">First, three names you need to know.</p>
     <div class="who">
       <div class="who-card lift">
         <div class="who-icon" aria-hidden="true">🎮</div>
         <h3>Rockstar Games</h3>
-        <p>The studio that makes Grand Theft Auto. GTA V (2013) is one of the best-selling games ever.</p>
+        <p>The studio that makes Grand Theft Auto. GTA V (2013) is one of the best-selling games ever, with over 230 million copies.</p>
       </div>
       <div class="who-arrow" aria-hidden="true">owned by →</div>
       <div class="who-card lift">
@@ -103,8 +124,8 @@
   </section>
 
   <section class="block" id="timeline">
-    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="eyebrow">Three years in two charts</span></div>
-    <h2>The hype, and the share price</h2>
+    <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span><span class="eyebrow">Hype vs shares</span></div>
+    <h2>Three years of hype, and the share price</h2>
     <p class="note">Top: how many people read about GTA VI each day. Bottom: Take-Two's share price on the same dates.
       Pins mark the big GTA moments. Hover or tap a pin to see what happened.</p>
     <div class="legend" id="type-legend-1"></div>
@@ -116,7 +137,7 @@
     </div>
     <div class="card"><div class="chart-title">The hype · people reading GTA VI's Wikipedia page, per day</div><div id="c-attn" class="chart tall"></div>
       <p class="note small">The scale jumps by 10× at each line (1k, 10k, 100k, 1M), so small and huge days both fit.</p></div>
-    <div class="card"><div class="chart-title">The money · Take-Two share price (US$)</div><div id="c-price" class="chart"></div>
+    <div class="card"><div class="chart-title">The shares · Take-Two share price (US$)</div><div id="c-price" class="chart"></div>
       <p class="note small" id="price-note"></p></div>
   </section>
 
@@ -143,32 +164,22 @@
 
   <section class="block" id="busy">
     <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12h4l3-8 6 16 3-8h4"/></svg></span><span class="eyebrow">Busy, not up</span></div>
-    <h2>Hype makes the market busy, not happy</h2>
-    <p class="note">Looking at all 740+ trading days, not just the big ones: when interest in GTA jumps, do the shares go up?</p>
-    <div class="meters" id="meters"></div>
-    <div class="two">
-      <div class="card">
-        <div class="chart-title">Every trading day: extra interest vs extra trading</div>
-        <div id="c-scatter" class="chart tall"></div>
-        <p class="note small">Each dot is one day. Further right = more people reading about GTA than usual. Higher = more shares traded than usual.
-          The dots drift up as they go right: busy hype days are busy trading days.</p>
-      </div>
-      <div class="card">
-        <div class="chart-title">Which comes first: the hype or the trading?</div>
-        <div id="c-lag" class="chart tall"></div>
-        <p class="note small" id="lag-note"></p>
-      </div>
-    </div>
+    <h2>Hype makes people trade, not buy</h2>
+    <p class="note">We checked every trading day for three years. When more people read about GTA, here's what happened to Take-Two's shares.</p>
+    <div class="qa" id="qa"></div>
+    <div class="card"><div class="chart-title">How busy was trading? Shares bought and sold, compared with a normal day</div><div id="c-busy" class="chart"></div>
+      <p class="note small">On a normal day about <b id="busy-normal">–</b> million Take-Two shares change hands. On delay days, almost five times as many did.</p></div>
   </section>
 
   <section class="block" id="bangladesh">
     <div class="sec-head"><span class="sec-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span class="eyebrow">Bangladesh</span></div>
-    <h2>Bangladesh vs the world</h2>
-    <p class="note">Google searches for "GTA 6", week by week. Each line is scaled so its own busiest week = 100.
-      That lets us compare <em>when</em> people got excited, not how many people there are.</p>
+    <h2>Bangladesh watched the trailers. The world bought the game.</h2>
+    <p class="note">Google searches for "GTA 6". In both charts, a bigger bar means more people searching.</p>
     <div class="two">
-      <div class="card"><div class="chart-title">Searches for "GTA 6" each week (busiest week = 100)</div><div id="c-bd" class="chart tall"></div></div>
-      <div class="card"><div class="chart-title">Which countries searched most? Last 12 months (top country = 100)</div><div id="c-sa" class="chart tall"></div></div>
+      <div class="card"><div class="chart-title">How big was each moment? (searches that week, launch week = 100)</div><div id="c-bd" class="chart tall"></div>
+        <p class="note small" id="bd-note"></p></div>
+      <div class="card"><div class="chart-title">Who searched most? (for every 100 searches in the top country)</div><div id="c-sa" class="chart tall"></div>
+        <p class="note small" id="sa-note"></p></div>
     </div>
     <div class="findings" id="bd-findings"></div>
   </section>
@@ -180,18 +191,19 @@
       <div>
         <h3>Data (all free and public)</h3>
         <ul>
-          <li><b>Interest:</b> daily readers of the English Wikipedia page "Grand Theft Auto VI" (the page went live with Trailer 1 in Dec 2023).</li>
+          <li><b>Sales:</b> Sensor Tower estimates, as reported by the BBC, The Business Standard and GameSpot. Take-Two hasn't published official GTA VI sales yet.</li>
+          <li><b>GTA V's sales history:</b> Take-Two's reported totals (copies shipped), from 11 million on day one in 2013 to over 230 million in 2026.</li>
+          <li><b>Interest:</b> daily readers of the English Wikipedia page "Grand Theft Auto VI" (live since Trailer 1 in Dec 2023).</li>
           <li><b>Share prices:</b> Take-Two (TTWO) and the S&amp;P 500 fund (SPY), daily, from Yahoo Finance.</li>
           <li><b>Searches:</b> Google Trends for "GTA 6", worldwide and Bangladesh.</li>
-          <li><b>Sales and reviews:</b> news reports, linked on each moment. Sales are estimates, not official numbers.</li>
         </ul>
       </div>
       <div>
         <h3>Things to keep in mind</h3>
         <ul>
-          <li>There are only about ten big moments, so treat the averages as a story, not a law.</li>
-          <li>Two things happening together doesn't prove one caused the other.</li>
-          <li>Wikipedia readers lean towards English speakers.</li>
+          <li>Sales figures are estimates and they change: the launch-day estimate was $1.84B, a day later it was $2.36B.</li>
+          <li>The 2026–2035 numbers are scenarios built on GTA V's history, not a forecast anyone can promise.</li>
+          <li>Only about ten big GTA moments, so treat the stock averages as a story, not a law.</li>
           <li>Fan project. Not linked to Rockstar Games or Take-Two. Not investment advice.</li>
         </ul>
       </div>
@@ -202,18 +214,18 @@
         <div>
           <h3>Methods</h3>
           <ul>
-            <li><b>Event study.</b> "Vs the market" is the <i>abnormal return</i>: Take-Two's daily return minus what a market model (TTWO regressed on SPY) predicts, fitted on trading days −130 to −10 before each event. News after the US close counts on the next trading day.</li>
+            <li><b>2026–2035 scenarios.</b> Day one = Sensor Tower's ~24.5M copies / ~$2.36B. After that, GTA VI adds GTA V's post-day-one copies at the same age (interpolated between Take-Two milestones), times 0.6 (low), 1.0 (middle) or 1.4 (high). Average money per copy is an assumption that falls from ~$80 in late 2026 to ~$30 from 2033, as discounts and cheaper editions take over. Calendar years; 2026 includes day one.</li>
+            <li><b>"Vs the market"</b> is the <i>abnormal return</i>: Take-Two's daily return minus what a market model (TTWO regressed on SPY) predicts, fitted on trading days −130 to −10 before each event. News after the US close counts on the next trading day.</li>
             <li><b>Trading and interest (× normal).</b> That day's volume ÷ median of the previous 60 trading days; that day's Wikipedia views ÷ median of the previous 30 days.</li>
-            <li><b>Surprises, not levels.</b> Section 05 correlates the log of each day's value minus its trailing baseline, because both raw series trend over time and would give a misleading answer. Weekend views roll into Monday.</li>
-            <li><b>Wanted level.</b> 20-day volatility of Take-Two's daily returns (annualised), ranked against its own 2023–26 history: 5 stars = top 5%.</li>
+            <li><b>Section "Busy, not up"</b> correlates daily surprises (log value minus its trailing baseline), because raw series trend over time and mislead.</li>
+            <li><b>Wanted level.</b> 20-day volatility of Take-Two's daily returns, ranked against its own 2023–26 history: 5 stars = top 5%.</li>
           </ul>
         </div>
         <div>
-          <h3>Terms</h3>
+          <h3>Terms and numbers</h3>
           <ul>
-            <li><b>r (correlation)</b>: how closely two things move together, from 0 (not at all) to 1 (perfectly). Roughly: under 0.1 none, 0.1–0.3 weak, 0.3–0.5 moderate, above 0.5 strong.</li>
-            <li><b>Pearson vs Spearman</b>: two ways to measure r. Spearman only looks at the order of values, so a few huge days count less.</li>
-            <li><b>Lag</b>: comparing today's hype with trading a few days later (or earlier) to see which moves first.</li>
+            <li><b>r (correlation)</b>: how closely two things move together, from 0 (not at all) to 1 (perfectly). Under 0.1 none, 0.1–0.3 weak, 0.3–0.5 moderate, above 0.5 strong.</li>
+            <li><b>Sold-in</b>: copies shipped to shops and digital stores, the figure Take-Two reports.</li>
             <li>Code and full method: <a href="https://github.com/ZubayerOjhor/leonida-hype-index" target="_blank" rel="noopener">GitHub repository</a>.</li>
           </ul>
         </div>
