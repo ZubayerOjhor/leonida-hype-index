@@ -289,9 +289,9 @@ table.events { width: 100%; border-collapse: collapse; font-size: 14px; min-widt
   width: max-content; max-width: 260px; white-space: normal; text-align: left;
   background: rgba(29, 17, 49, .96); color: var(--text); border: 1px solid var(--line); border-radius: 10px;
   padding: 9px 11px; font: 500 12px/1.45 var(--font); letter-spacing: 0; text-transform: none;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, .5); opacity: 0; pointer-events: none; transition: opacity .15s; z-index: 30;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .5); pointer-events: none; z-index: 30; display: none;
 }
-.term:hover::after, .term:focus::after { opacity: 1; }
+.term:hover::after, .term:focus::after { display: block; }
 th .term::after { left: auto; right: 0; transform: none; }
 
 /* ================= method ================= */
