@@ -18,11 +18,11 @@ All data is real and public. Nothing is simulated.
 | Review day (18 Nov 2026, Metacritic 99) | Attention 20× normal, TTWO **+6.5%** vs the market |
 | Launch day (19 Nov 2026) | All-time attention peak (750k Wikipedia views, 29× normal), yet TTWO **−2.6%** vs the market: sell the news |
 | Control event (Google Project Genie, 30 Jan 2026) | TTWO **−7.8%** with *no* rise in GTA attention: the stock moves for reasons hype can't see |
-| Attention vs price, raw levels | r = 0.06 (Spearman 0.30). Two drifting series, unreliable |
+| Attention vs price, raw levels | r = 0.04 (Spearman 0.30). Two drifting series, unreliable |
 | Daily attention change vs daily return | r = −0.02. No directional link |
-| Attention surprise vs volume surprise | **r = 0.33** (0.19 with all event days removed). The real link |
+| Attention surprise vs volume surprise | **r = 0.34** (0.19 with all event days removed). The real link |
 | Who moves first? | Same day. A slight tilt to attention leading by one day, too small to trade on |
-| Bangladesh | #58 of 65 countries for search interest, but trailers hit **2.5–3.7× harder** here relative to launch week than worldwide |
+| Bangladesh | #59 of 67 countries for search interest, but trailers hit **2.5–3.7× harder** here relative to launch week than worldwide |
 
 ## How it is built
 
