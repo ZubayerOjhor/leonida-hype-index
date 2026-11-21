@@ -1,85 +1,85 @@
 country,interest
-Netherlands,100
-United Kingdom,99
-Germany,85
-France,82
-United States,78
-Norway,77
-Australia,76
-Denmark,76
-Ireland,74
-Poland,72
+United Kingdom,100
+Netherlands,97
+Germany,89
+United States,82
+France,80
+Norway,78
+Australia,77
+Ireland,75
+Denmark,74
+Poland,74
+Sweden,72
+Canada,72
 Lithuania,71
 New Zealand,71
-Belgium,70
-Sweden,69
-Austria,67
-Canada,67
-Switzerland,64
-Romania,62
-Hungary,62
-Czechia,61
-Finland,59
+Belgium,67
+Switzerland,66
+Austria,65
+Romania,63
+Czechia,62
+Finland,62
+Hungary,60
 Portugal,58
-Brazil,55
-Tunisia,51
-Chile,50
+Brazil,53
+Chile,51
+Spain,50
 Croatia,50
-Spain,49
+Italy,48
 Slovakia,48
-Italy,47
-Pakistan,44
-Mexico,44
-South Africa,43
-Serbia,43
-Costa Rica,42
-Bulgaria,41
-Dominican Republic,41
+Tunisia,47
+Pakistan,43
+Mexico,43
+Costa Rica,43
+Dominican Republic,43
+Bulgaria,42
+Serbia,42
+South Africa,41
 Israel,38
 Argentina,38
 Morocco,37
-United Arab Emirates,36
+United Arab Emirates,37
+Colombia,37
 Algeria,35
-Colombia,35
 Greece,33
-Türkiye,32
+Türkiye,33
 Sri Lanka,31
-Singapore,28
-Venezuela,28
+Singapore,29
+Venezuela,29
+Ecuador,26
+Peru,26
 Iraq,25
-Philippines,25
-Peru,25
-Ecuador,24
-Malaysia,20
+Philippines,24
+Malaysia,21
 St. Helena,20
 India,20
 Egypt,19
-Saudi Arabia,18
+Saudi Arabia,17
 Russia,17
-Hong Kong,17
 Bangladesh,16
-Nigeria,15
 Ukraine,15
+Nigeria,15
 Indonesia,13
 Iran,11
 South Korea,9
-Thailand,8
+Thailand,9
 Vietnam,7
 Japan,2
 Central African Republic,0
+Chad,0
 Christmas Island,0
 China,0
 Cameroon,0
-Chad,0
+Congo - Kinshasa,0
 Cocos (Keeling) Islands,0
 Comoros,0
 Bosnia & Herzegovina,0
 British Virgin Islands,0
-British Indian Ocean Territory,0
+Ethiopia,0
 Falkland Islands (Islas Malvinas),0
 French Polynesia,0
 French Southern Territories,0
-Ethiopia,0
+Fiji,0
 Eswatini,0
 Faroe Islands,0
 Equatorial Guinea,0
@@ -94,7 +94,7 @@ Curaçao,0
 Cuba,0
 Cook Islands,0
 Congo - Brazzaville,0
-Congo - Kinshasa,0
+Belarus,0
 Belize,0
 Benin,0
 Brunei,0
@@ -102,7 +102,7 @@ Burkina Faso,0
 Cambodia,0
 Burundi,0
 Bouvet Island,0
-Belarus,0
+British Indian Ocean Territory,0
 Barbados,0
 Botswana,0
 Bolivia,0
@@ -134,16 +134,16 @@ Jersey,0
 Jamaica,0
 Isle of Man,0
 Guinea,0
-Guernsey,0
 Iceland,0
 Honduras,0
+Hong Kong,0
 Guatemala,0
+Guernsey,0
 Guam,0
-Haiti,0
 Heard & McDonald Islands,0
 Guinea-Bissau,0
 Guyana,0
-Fiji,0
+Haiti,0
 French Guiana,0
 Gambia,0
 Gabon,0
