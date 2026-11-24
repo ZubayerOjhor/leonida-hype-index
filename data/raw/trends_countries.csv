@@ -1,68 +1,68 @@
 country,interest
 United Kingdom,100
-Netherlands,97
-Germany,89
-United States,82
-France,80
+Netherlands,92
+United States,85
+Germany,81
+Australia,79
 Norway,78
-Australia,77
-Ireland,75
+France,76
 Denmark,74
-Poland,74
-Sweden,72
-Canada,72
-Lithuania,71
+Ireland,74
+Canada,71
 New Zealand,71
-Belgium,67
-Switzerland,66
-Austria,65
-Romania,63
-Czechia,62
+Sweden,70
+Lithuania,68
+Poland,68
+Austria,64
+Belgium,62
 Finland,62
-Hungary,60
-Portugal,58
-Brazil,53
-Chile,51
-Spain,50
-Croatia,50
-Italy,48
-Slovakia,48
-Tunisia,47
-Pakistan,43
-Mexico,43
+Switzerland,62
+Czechia,61
+Hungary,59
+Romania,59
+Portugal,56
+Brazil,55
+Croatia,49
+Chile,48
+Slovakia,46
+Spain,46
+Italy,45
+Tunisia,45
 Costa Rica,43
-Dominican Republic,43
-Bulgaria,42
+Mexico,42
 Serbia,42
-South Africa,41
+Pakistan,40
+Bulgaria,39
+South Africa,39
 Israel,38
-Argentina,38
-Morocco,37
-United Arab Emirates,37
-Colombia,37
-Algeria,35
-Greece,33
-Türkiye,33
-Sri Lanka,31
+Dominican Republic,38
+Argentina,36
+United Arab Emirates,35
+Morocco,34
+Colombia,34
+Algeria,32
+Greece,32
+Türkiye,31
+Sri Lanka,30
 Singapore,29
-Venezuela,29
-Ecuador,26
-Peru,26
-Iraq,25
-Philippines,24
-Malaysia,21
-St. Helena,20
-India,20
-Egypt,19
-Saudi Arabia,17
-Russia,17
+Venezuela,27
+Peru,25
+Philippines,25
+Iraq,24
+Ecuador,23
+Malaysia,20
+India,19
+Hong Kong,18
+Saudi Arabia,18
+Egypt,18
 Bangladesh,16
+Russia,16
 Ukraine,15
-Nigeria,15
+Nigeria,14
 Indonesia,13
-Iran,11
-South Korea,9
+Iran,10
 Thailand,9
+South Korea,7
 Vietnam,7
 Japan,2
 Central African Republic,0
@@ -70,23 +70,23 @@ Chad,0
 Christmas Island,0
 China,0
 Cameroon,0
-Congo - Kinshasa,0
+Cape Verde,0
 Cocos (Keeling) Islands,0
 Comoros,0
 Bosnia & Herzegovina,0
 British Virgin Islands,0
-Ethiopia,0
+British Indian Ocean Territory,0
 Falkland Islands (Islas Malvinas),0
 French Polynesia,0
 French Southern Territories,0
-Fiji,0
+Ethiopia,0
 Eswatini,0
 Faroe Islands,0
 Equatorial Guinea,0
 Eritrea,0
 Estonia,0
 El Salvador,0
-Cape Verde,0
+Côte d’Ivoire,0
 Caribbean Netherlands,0
 Cayman Islands,0
 Cyprus,0
@@ -94,7 +94,7 @@ Curaçao,0
 Cuba,0
 Cook Islands,0
 Congo - Brazzaville,0
-Belarus,0
+Congo - Kinshasa,0
 Belize,0
 Benin,0
 Brunei,0
@@ -102,7 +102,7 @@ Burkina Faso,0
 Cambodia,0
 Burundi,0
 Bouvet Island,0
-British Indian Ocean Territory,0
+Belarus,0
 Barbados,0
 Botswana,0
 Bolivia,0
@@ -134,16 +134,16 @@ Jersey,0
 Jamaica,0
 Isle of Man,0
 Guinea,0
+Guernsey,0
 Iceland,0
 Honduras,0
-Hong Kong,0
 Guatemala,0
-Guernsey,0
 Guam,0
+Haiti,0
 Heard & McDonald Islands,0
 Guinea-Bissau,0
 Guyana,0
-Haiti,0
+Fiji,0
 French Guiana,0
 Gambia,0
 Gabon,0
@@ -155,9 +155,9 @@ Grenada,0
 Guadeloupe,0
 Dominica,0
 Djibouti,0
-Côte d’Ivoire,0
-Myanmar (Burma),0
 Nepal,0
+Myanmar (Burma),0
+Mozambique,0
 Nauru,0
 Namibia,0
 Mongolia,0
@@ -165,7 +165,7 @@ Mayotte,0
 Monaco,0
 Moldova,0
 Niue,0
-Mozambique,0
+Norfolk Island,0
 Montserrat,0
 Montenegro,0
 Libya,0
@@ -204,16 +204,16 @@ Palestine,0
 New Caledonia,0
 Nicaragua,0
 Niger,0
-Norfolk Island,0
+Solomon Islands,0
 St. Lucia,0
 St. Martin,0
+St. Helena,0
 St. Barthélemy,0
-Somalia,0
 South Sudan,0
 South Georgia & South Sandwich Islands,0
-Solomon Islands,0
-Slovenia,0
 Sint Maarten,0
+Slovenia,0
+Somalia,0
 Sierra Leone,0
 Senegal,0
 Seychelles,0
