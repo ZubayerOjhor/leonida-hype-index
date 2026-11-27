@@ -1,59 +1,58 @@
 country,interest
 United Kingdom,100
-Netherlands,87
-United States,84
+Netherlands,90
+United States,87
+Germany,80
 Norway,78
-Germany,77
-Australia,76
+Australia,78
 Ireland,75
-France,73
+Denmark,73
+France,72
 Canada,72
 New Zealand,72
-Denmark,71
-Sweden,67
-Poland,65
-Lithuania,64
+Sweden,68
+Poland,68
+Lithuania,66
+Belgium,64
 Austria,63
-Belgium,62
-Switzerland,61
-Finland,60
-Hungary,57
-Czechia,57
-Romania,57
-Portugal,54
-Brazil,51
+Finland,62
+Switzerland,60
+Hungary,58
+Czechia,58
+Romania,56
+Portugal,55
+Brazil,50
+Croatia,48
 Chile,47
-Croatia,47
-Slovakia,45
-Italy,44
-Costa Rica,44
-Spain,44
-Serbia,41
-Tunisia,41
-Mexico,40
+Slovakia,46
+Spain,45
+Italy,43
+Costa Rica,43
+Mexico,41
+Serbia,40
+Tunisia,40
 Bulgaria,38
-Argentina,37
+Pakistan,38
+South Africa,38
+Israel,37
 Dominican Republic,36
-Israel,36
-South Africa,36
-Pakistan,35
+Argentina,36
 United Arab Emirates,34
 Morocco,33
 Colombia,33
-Greece,31
-Sri Lanka,30
-Türkiye,29
-Algeria,28
-Singapore,28
+Greece,32
+Algeria,30
+Türkiye,30
+Singapore,30
 Venezuela,26
 Philippines,25
-Peru,23
-Iraq,23
+Iraq,24
+Peru,24
 Ecuador,23
 Malaysia,21
+Hong Kong,19
 India,18
 Egypt,18
-Hong Kong,18
 Saudi Arabia,17
 Russia,16
 Bangladesh,15
@@ -65,13 +64,14 @@ Thailand,8
 South Korea,7
 Vietnam,7
 Japan,2
+Cocos (Keeling) Islands,0
 Central African Republic,0
 Chad,0
 Christmas Island,0
 China,0
 Cameroon,0
 Cape Verde,0
-Cocos (Keeling) Islands,0
+Caribbean Netherlands,0
 Comoros,0
 Bosnia & Herzegovina,0
 British Virgin Islands,0
@@ -87,7 +87,7 @@ Eritrea,0
 Estonia,0
 El Salvador,0
 Côte d’Ivoire,0
-Caribbean Netherlands,0
+Djibouti,0
 Cayman Islands,0
 Cyprus,0
 Curaçao,0
@@ -154,11 +154,11 @@ Greenland,0
 Grenada,0
 Guadeloupe,0
 Dominica,0
-Djibouti,0
+Nauru,0
 Nepal,0
 Myanmar (Burma),0
 Mozambique,0
-Nauru,0
+Montserrat,0
 Namibia,0
 Mongolia,0
 Mayotte,0
@@ -166,7 +166,7 @@ Monaco,0
 Moldova,0
 Niue,0
 Norfolk Island,0
-Montserrat,0
+Niger,0
 Montenegro,0
 Libya,0
 Martinique,0
@@ -203,18 +203,18 @@ Palau,0
 Palestine,0
 New Caledonia,0
 Nicaragua,0
-Niger,0
-Solomon Islands,0
+Sri Lanka,0
+South Georgia & South Sandwich Islands,0
 St. Lucia,0
 St. Martin,0
 St. Helena,0
 St. Barthélemy,0
 South Sudan,0
-South Georgia & South Sandwich Islands,0
+Sierra Leone,0
 Sint Maarten,0
 Slovenia,0
 Somalia,0
-Sierra Leone,0
+Solomon Islands,0
 Senegal,0
 Seychelles,0
 Taiwan,0
